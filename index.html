@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container mt-5">
+            <form onsubmit="saveToLocalStorage(event)">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="form-group">
+                        <label for="expenseAmount">Choose Expense Amount</label>
+                        <input
+                            type="text"
+                            name="expenseAmount"
+                            id="expenseAmount"
+                            class="form-control"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Choose Description</label>
+                        <input
+                            type="text"
+                            name="description"
+                            id="description"
+                            class="form-control"
+                            required
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="category">Choose a Category</label>
+                        <select name="category" id="category" class="form-control">
+                            <option value="food">Food</option>
+                            <option value="travel">Travel</option>
+                            <option value="shopping">Shopping</option>
+                            <option value="utilities">Utilities</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Expense</button>
+                </div>
+            </form>
+            <ul id="listOfitems"></ul>
+        </div>
+
+    <script src="script.js"></script>
+
+
+    </body>
+</html>
